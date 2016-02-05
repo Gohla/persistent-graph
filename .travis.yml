@@ -2,12 +2,25 @@ language: java
 jdk:
   - oraclejdk7
 
-before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
+# Cache local Maven repository
+cache:
+  directories:
+    - $HOME/.m2
 
+# Get Maven settings.xml from the orphaned travis branch
+before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
+# Don't build the travis branch since it only contains settings.xml
+branches:
+  except:
+    - travis
+
+# Skip installation step
 install: true
 
+# Build the artifacts
 script: mvn clean verify --settings target/travis/settings.xml
 
+# Deploy with Maven when a commit on the master branch is tagged
 deploy:
   - provider: script
     script: mvn deploy --settings target/travis/settings.xml
@@ -15,7 +28,3 @@ deploy:
     on:
       branch: master
       tags: true
-
-branches:
-  except:
-    - travis
