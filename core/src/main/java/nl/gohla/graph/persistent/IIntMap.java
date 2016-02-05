@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
  * Persistent integer to object map.
  * 
  * @param <T>
- *            Type of values in the map. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of values in the map. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public interface IIntMap<T> {
     /**

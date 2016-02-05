@@ -10,7 +10,7 @@
   <parent>
     <groupId>nl.gohla</groupId>
     <artifactId>persistent-graph</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <relativePath>../</relativePath>
   </parent>
 
@@ -40,6 +40,17 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
     </plugins>
   </build>
+
+  <name>Persistent Graph PCollections implementation</name>
+  <description>Implementation of persistent graphs with the PCollections collections library</description>
 </project>

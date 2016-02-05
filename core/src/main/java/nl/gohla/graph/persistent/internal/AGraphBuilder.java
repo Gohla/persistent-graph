@@ -15,9 +15,9 @@ import nl.gohla.graph.persistent.IGraphBuilder;
  * implementation of building the persistent graph abstracted out.
  * 
  * @param <V>
- *            Type of node labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of node labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public abstract class AGraphBuilder<V, E> implements IGraphBuilder<V, E> {
     protected static class Node<V, E> {

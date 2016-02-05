@@ -8,9 +8,9 @@ import javax.annotation.Nullable;
  * be null. Edge labels may not be null.
  * 
  * @param <V>
- *            Type of node labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of node labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public interface IGraph<V, E> {
     /**

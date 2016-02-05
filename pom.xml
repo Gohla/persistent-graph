@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nl.gohla</groupId>
   <artifactId>persistent-graph</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -27,13 +27,74 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.1</version>
+          <version>3.5</version>
           <configuration>
             <source>1.7</source>
             <target>1.7</target>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>2.4</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.3</version>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>bintray-gohla</id>
+      <url>https://api.bintray.com/maven/gohla/maven/persistent-graph/;publish=1</url>
+    </repository>
+  </distributionManagement>
+
+  <name>Persistent Graph parent POM</name>
+  <description>Persistent graph parent and aggregate POM</description>
+  <url>https://github.com/Gohla/persistent-graph</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:https://github.com/Gohla/persistent-graph.git</connection>
+    <developerConnection>scm:git:git@github.com:Gohla/persistent-graph.git</developerConnection>
+    <url>https://github.com/Gohla/persistent-graph</url>
+  </scm>
+  <developers>
+    <developer>
+      <name>Gabriël Konat</name>
+      <email>g.d.p.konat@tudelft.nl</email>
+      <organization>Delft University of Technology</organization>
+      <organizationUrl>http://www.ewi.tudelft.nl/en</organizationUrl>
+    </developer>
+  </developers>
 </project>

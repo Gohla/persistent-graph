@@ -12,7 +12,7 @@ import nl.gohla.graph.persistent.ISet;
  * Implementation for {@link IGraphEdges}, with collection-specific details abstracted out.
  * 
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public abstract class AGraphEdges<E> implements IGraphEdges<E> {
     public final IIntMap<ISet<E>> edges;

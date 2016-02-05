@@ -6,7 +6,7 @@ import java.util.Collection;
  * Persistent object set.
  * 
  * @param <T>
- *            Type of values in the set. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of values in the set. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public interface ISet<T> extends Iterable<T> {
     /**

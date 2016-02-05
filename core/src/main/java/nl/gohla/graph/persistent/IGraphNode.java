@@ -6,9 +6,9 @@ import javax.annotation.Nullable;
  * Persistent, labeled, graph node data structure.
  * 
  * @param <V>
- *            Type of node labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of node labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public interface IGraphNode<V, E> {
     /**

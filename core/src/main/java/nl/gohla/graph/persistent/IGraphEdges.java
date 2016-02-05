@@ -6,7 +6,7 @@ import java.util.Map.Entry;
  * Persistent, labeled, graph edges collection.
  * 
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public interface IGraphEdges<E> {
     /**

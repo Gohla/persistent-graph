@@ -12,9 +12,9 @@ import nl.gohla.graph.persistent.IIntMap;
  * Implementation for {@link IGraph}, with collection-specific details abstracted out.
  * 
  * @param <V>
- *            Type of node labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of node labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  * @param <E>
- *            Type of edge labels. Must implement {@link #hashCode} and {@link #equals}.
+ *            Type of edge labels. Must implement {@link Object#hashCode} and {@link Object#equals}.
  */
 public abstract class AGraph<V, E> implements IGraph<V, E> {
     private final IIntMap<IGraphNode<V, E>> contexts;
