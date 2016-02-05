@@ -18,7 +18,7 @@
     <dependency>
       <groupId>nl.gohla</groupId>
       <artifactId>persistent-graph-core</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.pcollections</groupId>
