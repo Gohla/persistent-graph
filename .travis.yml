@@ -1,0 +1,6 @@
+# Don't build this branch
+branches:
+  except:
+    - travis
+install: true
+script: true
